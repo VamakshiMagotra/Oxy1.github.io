@@ -517,6 +517,7 @@ form {
     border-top: 8px solid #8897a2;
     bottom: 5px;
 }
+
 }
 .modal_2 {
 display: none; /* Hidden by default */
@@ -658,6 +659,9 @@ display: none; /* Hidden by default */
     width:500px;
   }
   .modal_2 {
+
+	.modal_2 {
+
 display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -695,6 +699,7 @@ display: none; /* Hidden by default */
   text-decoration: none;
   cursor: pointer;
 }
+
 .modd{
   font-size: 1.75rem;
  
@@ -710,6 +715,7 @@ display: none; /* Hidden by default */
 
 
 }
+
 
 </style>
 </head>
@@ -755,6 +761,7 @@ display: none; /* Hidden by default */
                                       <div class="loc2">
                                       <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Search for Medicines/ Healthcare Products">
                                     </div>
+
                                     </div>
                               </div>      
               </div>
@@ -766,11 +773,7 @@ display: none; /* Hidden by default */
                                     <!-- -->prescription
                                     <!-- -->!
                                 </div>
-                                <div class="_35UmJ"><button id="myBtn" class="btn btn-primary btn-sm">Here</button>
-                                <!-- <svg width="15" height="15" viewBox="0 2 20 20">
-                                        <path fill="currentColor" fill-rule="evenodd"
-                                            d="M16.6 8.6L12 13.2 7.4 8.6 6 10l6 6 6-6z"></path>
-                                    </svg>-->
+
                                     </div>
                             </div>
                         </div>
@@ -1085,7 +1088,6 @@ form.addEventListener("submit", ev => {
 //# sourceURL=pen.js
     </script>
 
-  
 <script>
 		$(document).ready(function(){
 		  $("input").focus(function(){
@@ -1100,6 +1102,7 @@ form.addEventListener("submit", ev => {
 		  });
 		});
 </script>
+
 <!--Modal-->
 <script>
 // Get the modal
@@ -1126,6 +1129,86 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+=======
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-storage.js"></script>
+
+<script>
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyCY8MwZCCO_SX32X10F7mV-A-b3rjianCk",
+    authDomain: "oxylogin-c3d7e.firebaseapp.com",
+    databaseURL: "https://oxylogin-c3d7e-default-rtdb.firebaseio.com",
+    projectId: "oxylogin-c3d7e",
+    storageBucket: "oxylogin-c3d7e.appspot.com",
+    messagingSenderId: "117193166181",
+    appId: "1:117193166181:web:59d8cb823f3d682ddce58c"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+</script>
+
+<script>
+var files = [];
+document.getElementById("files").addEventListener("change", function(e) {
+  files = e.target.files;
+  for (let i = 0; i < files.length; i++) {
+    console.log(files[i]);
+  }
+});
+
+document.getElementById("send").addEventListener("click", function() {
+  //checks if files are selected
+  if (files.length != 0) {
+    //Loops through all the selected files
+    for (let i = 0; i < files.length; i++) {
+      //create a storage reference
+      var storage = firebase.storage().ref(files[i].name);
+
+      //upload file
+      var upload = storage.put(files[i]);
+
+      //update progress bar
+      upload.on(
+        "state_changed",
+        function progress(snapshot) {
+          var percentage =
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          document.getElementById("progress").value = percentage;
+        },
+
+        function error() {
+          alert("error uploading file");
+        },
+
+        function complete() {
+          document.getElementById(
+            "uploading"
+          ).innerHTML += `${files[i].name} upoaded <br />`;
+        }
+      );
+    }
+  } else {
+    alert("No file chosen");
+  }
+});
+
+function getFileUrl(filename) {
+  //create a storage reference
+  var storage = firebase.storage().ref(filename);
+
+  //get file url
+  storage
+    .getDownloadURL()
+    .then(function(url) {
+      console.log(url);
+    })
+    .catch(function(error) {
+      console.log("error encountered");
+    });
+
 }
 </script>
     <!-- jQuery -->
