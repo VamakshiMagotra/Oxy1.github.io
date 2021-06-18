@@ -48,6 +48,52 @@
     margin-left: 9%;
   }
   }
+	.modal_2 {
+display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  right: 0;
+  top: 0;
+  width: 50%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto;
+  -webkit-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+
+}
+/* Modal Content */
+.modal_2 .modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 25px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(226, 23, 23);
+  text-decoration: none;
+  cursor: pointer;
+}
+.modd{
+  font-size: 1.75rem;
+ 
+}
+.modd2{
+  width: 50%;
+  margin-top: 15px;
+}
   </style>
 </head>
 
@@ -78,15 +124,33 @@
           <input type="text" class="form-a" aria-label="Text input with dropdown button"
            placeholder=" Search for Medicines/ Healthcare Products">
         </div>
-        <div class="col-4">
-          <input type="text" class="form" aria-label="Text input with dropdown button"
-           placeholder=" Add a Prescription !" style="
-           width: 91%;
-           height: 90%;
-           margin-top: 2%;
-           border-color: transparent;
-       ">
-        </div>
+        <div class="col-4" style="padding: 20px;">
+                          <div class="_3SnXL" id="_123v">
+                            <div tabindex="0" role="button" class="_2tdEn _1pXi6 _1D8Iz">
+                                <div>Add a
+                                    <!-- -->prescription
+                                    <!-- -->!
+                                </div>
+                                <div class="_35UmJ"><button id="myBtn" class="btn btn-primary btn-sm">Here</button>
+                                <!-- <svg width="15" height="15" viewBox="0 2 20 20">
+                                        <path fill="currentColor" fill-rule="evenodd"
+                                            d="M16.6 8.6L12 13.2 7.4 8.6 6 10l6 6 6-6z"></path>
+                                    </svg>-->
+                                    </div>
+                            </div>
+                        </div>
+                        <div id="myModal" class="modal_2" >
+                          <div class="modal-content">
+                              <span class="close" style="text-align:right;">&times;</span>
+                              <div class="modd">
+                                  <h4>Don't have a prescription?</h4>
+                                  <h5 style="font-style: italic; ">Add prescription</h5>
+                              </div>
+                              <button type="button" class="modd2 btn btn-success" >Upload </button>
+                          </div>
+  
+                      </div>
+                        </div> 
       </div>
       <div class="row">
         <div class="col"style="
@@ -545,6 +609,34 @@ function getFileUrl(filename) {
 
 }
 </script>
+	<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>
 
