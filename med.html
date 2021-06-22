@@ -8,16 +8,87 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Med Page</title>
   <!-- Roboto Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <!-- Material Design Bootstrap -->
-  <link rel="stylesheet" href="assets/css/mdb-pro.min.css">
-  <!-- Material Design Bootstrap Ecommerce -->
-  <link rel="stylesheet" href="assets/css/mdb.ecommerce.min.css">
-  <!-- Your custom styles (optional) -->
+
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+  <link rel="stylesheet" href="assets/css/templatemo-lava.css">
+
+  <link rel="stylesheet" href="assets/css/owl-carousel.css">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+     <!-- Roboto Font -->
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<!-- Your custom styles (optional) -->
+  <style>
+    .form-a{
+      width: 100%;
+      border-width: inherit;
+      height: 42%;
+      margin-top: 2%;
+      border-radius: 23px;
+    }
+    @media (max-width: 490px){
+      .form-a{
+      width: 100%;
+      border-width: inherit;
+      height: 42%;
+      margin-top: 2%;
+      border-radius: 23px;
+      margin-left: 9%;
+    }
+    }
+    .modal_2 {
+  display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    right: 0;
+    top: 0;
+    width: 50%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto;
+    -webkit-transition: all .25s ease-out;
+      -o-transition: all .25s ease-out;
+      transition: all .25s ease-out;
+  
+  }
+  /* Modal Content */
+  .modal_2 .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 25px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(226, 23, 23);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .modd{
+    font-size: 1.75rem;
+   
+  }
+  .modd2{
+    width: 50%;
+    margin-top: 15px;
+  }
+    </style>
 <style>
 .add-to-cart {
   --background-default: #17171B;
@@ -1145,43 +1216,21 @@ display: none; /* Hidden by default */
 
 
     <!-- ***** Header Area Start ***** -->
-    <header class="abc1">
-    
-        <nav class="navbar navbar-light navbar-expand-sm" style="background-color: #f4813f;"> 
-          <div class="container"> 
-            <div class="row row-content">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="abc2 col-sm-1">
-                <a class="navbar-brand mr-auto" href="./index.html"><img src="assets/images/logo2.jpeg" style="height:100px; width:50px; left:0;"></a>
-              </div>
-              <div class="col-12 col-sm-8" style="margin-top:25px ; padding-left: 50px;">
-                                    <div class="input-group">
-                                      <div class="input-group-prepend">
-                                        <button class="loc btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-compass fa-lg align-items-center"></span></button>
-                                        <div class="dropdown-menu">
-                                          <a class="dropdown-item" href="#">Location One</a>
-                                          <a class="dropdown-item" href="#">Location Two</a>
-                                          <a class="dropdown-item" href="#">Location Three</a>
-                                         </div> 
-            
-                                      <div class="loc2">
-                                      <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Search for Medicines/ Healthcare Products">
-                                    </div>
-                                    </div>
-                              </div>      
-              </div>
 
-                        <div class="col-12 col-sm-2 ml-auto" style="padding: 20px;">
+  
+    <div class="container" style=" margin-right: 0; margin-left: 0;background: #f4813f;min-width: 100%;min-height: 17vh;">
+      <div class="row">
+        <div class="col-1">
+          <img src="assets/images/logo2.jpeg" style="height:100px; width:50px;margin-left: 15%;margin-top: 2%;">
+          </div>
+        <div class="col-7">
+          <input type="text" class="form-a" aria-label="Text input with dropdown button"
+           placeholder=" Search for Medicines/ Healthcare Products">
+        </div>
+        <div class="col-4" style="padding: 20px;">
                           <div class="_3SnXL" id="_123v">
                             <div tabindex="0" role="button" class="_2tdEn _1pXi6 _1D8Iz">
-                                <div>Add a
-                                    <!-- -->prescription
-                                    <!-- -->!
-                                </div>
-                                <div class="_35UmJ"><button id="myBtn" class="btn btn-primary btn-sm">Here</button>
-                                <!-- <svg width="15" height="15" viewBox="0 2 20 20">
+                                <div class="_35UmJ"><button id="myBtn" class="btn btn-primary btn-sm" style="background: #f4813f;border: none;">Add Prescription</button>                                <!-- <svg width="15" height="15" viewBox="0 2 20 20">
                                         <path fill="currentColor" fill-rule="evenodd"
                                             d="M16.6 8.6L12 13.2 7.4 8.6 6 10l6 6 6-6z"></path>
                                     </svg>-->
@@ -1197,29 +1246,67 @@ display: none; /* Hidden by default */
                               </div>
                               <button type="button" class="modd2 btn btn-success" >Upload </button>
                           </div>
-
+  
                       </div>
-                        </div>       
-              <div class="abc3 col-12 col-sm-12 collapse navbar-collapse" id="Navbar">
-                  <ul class="navbar-nav ml-auto mr-auto">
-                      <li class="nav-item" style="padding:5px; padding-top: 0px;"><a class="nav-link" href="./index.html">Instruments</a></li>
-                      <li class="nav-item" style="padding:5px; padding-top: 0px;"><a class="nav-link" href="#"> Health & Fitness</a></li>
-                      <li class="nav-item" style="padding:5px; padding-top: 0px;"><a class="nav-link" href="#">Consult a Doctor</a></li>
-                      <li class="nav-item" style="padding:5px; padding-top: 0px;"><a class="nav-link" href="#">Diagnostic Test</a></li>
-                      <li class="nav-item" style="padding:5px; padding-top: 0px;"><a class="nav-link" href="./quickorder.html">Quick Order</a></li>
-                      <li class="nav-item" style="padding:5px; padding-top: 0px;"><a class="nav-link" href="#"><span class="fa fa-percent"></span>  Discounts</a></li>
-                      <li class="nav-item" style="padding:5px; padding-top: 0px;"><a class="nav-link" href="./login.html"><span class="fa fa-smile-beam"></span>  Login/Signup</a></li>
-                      <li class="nav-item" style="padding:5px; padding-top: 0px;"><a class="nav-link" href="./cart.html"><span class="fa fa-cart-plus"></span> Cart</a></li>
-
-                  </ul>
-                  </div>
-              </div>
-            
-              
-          </div>
-        </nav>
+                        </div> 
+      </div>
+      <div class="row">
+        <div class="col"style="
+        margin-left: 7%;margin-bottom: 1%;
+    ">
+    <button type="button" class="btn btn-primary" style="
+    background-color: transparent;
+    border-color: transparent;
+">
+     <svg xmlns="http://www.w3.org/2000/svg"  fill="white" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" style="
+     height: 3vh;
+ ">
+      <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+    </svg> Select location
+  </button>
+  <button type="button" class="btn btn-primary"style="
+    background-color: transparent;
+    border-color: transparent;
+">Instruments</button>
+      <button type="button" class="btn btn-primary"style="
+      background-color: transparent;
+      border-color: transparent;
+  ">Health & Fitness</button>
+      <button type="button" class="btn btn-primary"style="
+      background-color: transparent;
+      border-color: transparent;
+  ">Consult a Doctor</button>
+      <button type="button" class="btn btn-primary"style="
+      background-color: transparent;
+      border-color: transparent;
+  ">Diagnostic Test</button>
+      <button type="button" class="btn btn-primary"style="
+      background-color: transparent;
+      border-color: transparent;
+  ">Quick Order</button>
+      <button type="button" class="btn btn-primary"style="
+      background-color: transparent;
+      border-color: transparent;
+  ">Discounts</button>
+      <button type="button" class="btn btn-primary"style="
+      background-color: transparent;
+      border-color: transparent;
+  ">Login/Signup</button>   
+      <button type="button" class="btn btn-primary"style="
+      background-color: transparent;
+      border-color: transparent;
+  ">Cart</button>     
           
-    </header>
+          
+          
+          
+          
+          
+         
+        </div>
+      </div>
+    </div>
+
     <!-- ***** Header Area End ***** -->
 
     <!-- Navbar -->

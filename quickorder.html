@@ -5,596 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Quick Order</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <!-- Material Design Bootstrap -->
-  <link rel="stylesheet" href="assets/css/mdb-pro.min.css">
-  <!-- Material Design Bootstrap Ecommerce -->
-  <link rel="stylesheet" href="assets/css/mdb.ecommerce.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
-  
+  <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
 
-    <style>
-input:focus, textarea:focus, select:focus{
-        outline: none;
-    }
-form-select:focus{
-	outline: none;
-}
-form {
-  transition: all 0.5s;
-  position: absolute;
-  top: 36%;
-  transform: translateY(-50%);
-}
+  <link rel="stylesheet" href="assets/css/templatemo-lava.css">
 
-.finder {
-  border: 1px solid #fff;
-  background-color: #f6f5f0;
-  border-radius: 15px;
-  padding: 8px;
-  box-shadow: 9px 9px 16px rgba(189, 189, 189, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
-}
+  <link rel="stylesheet" href="assets/css/owl-carousel.css">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-.finder__outer {
-  display: flex;
-  padding: 1.5rem 2rem;
-  border-radius: 10px;
-  box-shadow: inset 10px 10px 15px -10px #c3c3c3, inset -10px -10px 15px -10px #ffffff;
-}
+     <!-- Roboto Font -->
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<!-- Your custom styles (optional) -->
 
-.finder__inner {
-  display: flex;
-  align-items: center;
-  position: relative;
-  flex: 1;
-}
 
-.finder__form {
-  flex: 1;
-  height: calc(100% + 3rem);
-}
-
-.finder__input {
-  height: calc(100% + 3rem);
-  border: none;
-  background-color: transparent;
-  outline: none;
-  font-size: 1.5rem;
-  letter-spacing: 0.75px;
-}
-
-.finder__icon {
-	margin-left: 1%;
-	margin-top: 0.5%;
-  width: 40px;
-  height: 40px;
-  margin-right: 1rem;
-  transition: all 0.2s;
-  box-shadow: inset 0 0 0 20px #292929;
-  border-radius: 50%;
-  position: relative;
-}
-.finder__icon:after, .finder__icon:before {
-  display: block;
-  content: "";
-  position: absolute;
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.finder__icon:after {
-  width: 10px;
-  height: 10px;
-  background-color: #292929;
-  border: 3px solid #f6f5f0;
-  top: 50%;
-  position: absolute;
-  transform: translateY(-50%);
-  left: 0px;
-  right: 0;
-  margin: auto;
-  border-radius: 50%;
-}
-.active .finder__icon:after {
-  border-width: 10px;
-  background-color: #f6f5f0;
-}
-
-.finder__icon:before {
-  width: 4px;
-  height: 13px;
-  background-color: #f6f5f0;
-  top: 50%;
-  left: 20px;
-  transform: rotateZ(45deg) translate(-50%, 0);
-  transform-origin: 0 0;
-  border-radius: 4px;
-}
-.active .finder__icon:before {
-  background-color: #292929;
-  width: 6px;
-  transform: rotateZ(45deg) translate(-50%, 25px);
-}
-
-.processing .finder__icon {
-  transform-origin: 50%;
-  animation: spinner 0.3s linear infinite;
-  animation-delay: 0.5s;
-}
-
-.active .finder__icon {
-  transform: translateY(-5px);
-}
-
-@keyframes spinner {
-  0% {
-    transform: rotateZ(45deg);
-  }
-  100% {
-    transform: rotateZ(405deg);
-  }
-}
-._3cTdj {
-    position: relative;
-		}
-	a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, button, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    outline: none;
-    vertical-align: baseline;
-    -webkit-tap-highlight-color: transparent;
-	}	
-	div {
-    display: block;
-	}
-	._6n5xr {
-    height: 123px;
-	}
-	._8KMep {
-    background: #f4813f;
+<style>
+  .form-a{
     width: 100%;
-    height: 93px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 200;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    padding: 15px 0;
-    -webkit-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
-}
-._3Tn87._3Tn87 {
-    max-width: 1316px;
-}
-._1M8sW {
-    padding-left: 0px;
-    padding-right: 15px;
-}
-._2MjsM {
-    max-width: 1024px;
-    margin: 0 auto;
-}
-.KbFCX {
+    border-width: inherit;
+    height: 42%;
+    margin-top: 2%;
+    border-radius: 23px;
+  }
+  @media (max-width: 490px){
+    .form-a{
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 1024px;
-    margin: 0 auto;
-}
-@media (min-width: 1024px) and (max-width: 1365px){
-._3p1_b, ._15jwV {
-    margin-right: 30px;
-}
-._3p1_b, ._15jwV {
-    margin-right: 50px;
-}
-._2V7rq {
-    max-width: 165px;
-    max-height: 50px;
-}
-._536c {
-        height: 212%;
-    padding-left: 29%;
-}
-.oHXcU {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 0.9;
-    position: relative;
-}
-._1xVvP {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-.wgDA6 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    z-index: 1;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-}
-._1disc {
-    max-width: 320px;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-}
-._1pXi6._1pXi6._1pXi6 {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-._1hFGA, ._1NDUW {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-._1hFGA {
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    padding-left: 15px;
-    height: 50px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background: #fff;
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-}
-._2tdEn {
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-}}
-@media (min-width: 1024px) and (max-width: 1365px){
-._1NDUW {
-    display: block;
-}
-._1NDUW {
-    max-width: calc(100% - 16px);
-    color: #10847e;
-    position: relative;
-    padding: 5px 20px 5px 0;
-    white-space: nowrap;
-}
-._1hFGA, ._1NDUW {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-._2xei5 {
-    font-weight: 600;
-}
-._1zoLu {
-    margin-left: 15px;
-    height: 20px;
-    width: 1px;
-    background: #dfe3e6;
-}
-._1pXi6._1pXi6._1pXi6 {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}}
-@media (min-width: 1024px) and (max-width: 1365px){
-._3p1_b, ._15jwV {
-    margin-right: 30px;
-}
-._3p1_b, ._15jwV {
-    margin-right: 50px;
-}
-._2VyyV {
-    cursor: auto;
-    position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-._2tdEn {
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-}
-._2qwUd {
-    width: 100%;
-}
-._2b5-9 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    
-}
-._2VyyV._1IvSS ._3lNKn {
-    border: 0 solid transparent;
-	    border-radius: 40px;
-}}
-@media (min-width: 1024px){
-._3lNKn {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    height: 50px;
-}
-._3lNKn {
-    background: #fff;
-    border: 1px solid #8897a2;
-    position: relative;
-    width: 100%;
-    border-radius: 6px;
-    padding-left: 10px;
-    overflow: hidden;
-    height: 45px;
-}
-._1gc6o, ._1tcdx, ._1zvpF, ._3lNKn {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-._1pXi6._1pXi6._1pXi6 {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}}
-@media (min-width: 1024px){
-._3lNKn ._1gc6o {
-    -webkit-box-ordinal-group: 6;
-    -ms-flex-order: 5;
-    order: 5;
-    height: 100%;
-    min-width: 50px;
-    background: #f4f7fb;
-}
-._3lNKn ._1gc6o {
-    -webkit-box-ordinal-group: 4;
-    -ms-flex-order: 3;
-    order: 3;
-    color: #8897a2;
-}
-._1gc6o, ._1tcdx, ._1zvpF, ._3lNKn {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-._1gc6o, ._1tcdx, ._1zvpF {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-._2tdEn {
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-}
-._3SnXL {
-    position: relative;
-    margin-left: auto;
-}
-._1pXi6._1pXi6._1pXi6 {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-._1D8Iz {
-    background: rgba(0, 0, 0, .18);
-    color: #fff;
-    padding: 5px 15px;
-    border-radius: 6px;
-    font-size: 14px;
-    line-height: 1.5;
-}
-._2tdEn {
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-}
-._35UmJ {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    font-size: 12px;
-}
-._1xVvP {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-._3l61w {
-    margin-top: 20px;
-}
-._1d9Ep, .SbvHK {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-.SbvHK {
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    width: 100%;
-}
-._1d9Ep {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-._1d9Ep, .SbvHK {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-.KSY3N {
-    display: block;
-    color: #fff;
-    margin-right: 25px;
-    position: relative;
-    line-height: 21px;
-	text-decoration-line: NONE;
-}
-.KSY3N:last-child {
-    margin-right: 0;
-}
-._3iGxG, .lbgdE {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-._3iGxG {
-    margin-left: auto;
-}
-.lbgdE {
-    margin-right: 30px;
-    color: #fff;
-    line-height: 21px;
-}
-.lbgdE img, .lbgdE svg {
-    display: block;
-    margin-right: 5px;
-}
-._2kNHc, ._115IV, .jEJAq {
-    width: 24px;
-}
-.lbgdE._32Xuq, .lbgdE._162OC {
-    position: relative;
-}
-.lbgdE:last-child {
-    margin-right: 0;
-}
-._1NDUW:after {
-    content: "";
-    position: absolute;
-    right: 0;
-    border: 6px solid transparent;
-    border-top: 8px solid #8897a2;
-    bottom: 5px;
-}}
-
-@media (max-width:600px){
-  header{
-    margin-bottom: 40px;
+    border-width: inherit;
+    height: 42%;
+    margin-top: 2%;
+    border-radius: 23px;
+    margin-left: 9%;
   }
-  .abc2{
-    display:none;
-  }
-  .abc3{
-      align-items: center;
-      text-align: center;
-      justify-content: center;
-  }
-  .abc4{
-      width:120px;
-			height:20px;
-			margin-left: -1%;
-			height: 7.5vh;
-  }
-  figure{
-    display:flex;
-    flex-direction: column;
-  }
-  .xyz{
-    text-align: center;
-  }
-  .loc2{
-    width: 150% !important;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .loc{
-    padding:0px !important;
-    width:30%;
-    height: 100%;
-    margin: 0px !important;
-      }
-  ._3SnXL{
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    width:80%;
-    margin-left:auto;
-    margin-right: auto;
-  }
-  .modd{
-    font-size: 1rem;
-    
-  }
-  .modal_2 .modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 25px;
-  border: 1px solid #888;
-  width: 80%;
-}
-  .modd2{
-    width: 80%;
-    height: 25%;
-    margin: 7px !important;
-    text-align: center;
-    justify-content: center;
-  }
-  
-}
-@media (min-width:1024px){
-    .abc1{
-    background-color:#f4813f;
-    max-height: 200px;
-  }
-  .abc3{
-    padding:3px;
-  }
-  .abc4{
-      width:75%;
-		
-			margin-left: -1%;
-			height: 7.5vh;
-  }
-  .xyz{
-    margin-right: 18%;
-  }
-  .loc{
-    padding: 0px !important;
-    width:10%;
-    height:100%;
-    margin: 0px !important;
-  }
-  .loc2{
-    width:500px;
   }
   .modal_2 {
 display: none; /* Hidden by default */
@@ -642,88 +86,99 @@ display: none; /* Hidden by default */
   width: 50%;
   margin-top: 15px;
 }
-
-}
-
-	</style>
+  </style>
 </head>
 
 <body class="skin-light">
-    <header class="abc1">
-    
-        <nav class="navbar navbar-light navbar-expand-sm" style="background-color: #f4813f;"> 
-          <div class="container"> 
-            <div class="row row-content">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="abc2 col-sm-1">
-                <a class="navbar-brand mr-auto" href="./index.html"><img src="assets/images/logo2.jpeg" style="height:100px; width:50px; left:0;"></a>
-              </div>
-              <div class="col-12 col-sm-8" style="margin-top:25px ; padding-left: 50px;">
-                                    <div class="input-group">
-                                      <div class="input-group-prepend">
-                                        <button class="loc btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-compass fa-lg align-items-center"></span></button>
-                                        <div class="dropdown-menu">
-                                          <a class="dropdown-item" href="#">Location One</a>
-                                          <a class="dropdown-item" href="#">Location Two</a>
-                                          <a class="dropdown-item" href="#">Location Three</a>
-                                         </div> 
-            
-                                      <div class="loc2">
-                                      <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Search for Medicines/ Healthcare Products">
-                                    </div>
-                                    </div>
-                              </div>      
-              </div>
-  
-                        <div class="col-12 col-sm-2 ml-auto" style="padding: 20px;">
-                          <div class="_3SnXL" id="_123v">
-                            <div tabindex="0" role="button" class="_2tdEn _1pXi6 _1D8Iz">
-                                <div>Add a
-                                    <!-- -->prescription
-                                    <!-- -->!
-                                </div>
-                                <div class="_35UmJ"><button id="myBtn" class="btn btn-primary btn-sm">Here</button>
-                                <!-- <svg width="15" height="15" viewBox="0 2 20 20">
-                                        <path fill="currentColor" fill-rule="evenodd"
-                                            d="M16.6 8.6L12 13.2 7.4 8.6 6 10l6 6 6-6z"></path>
-                                    </svg>-->
-                                    </div>
-                            </div>
-                        </div>
-                        <div id="myModal" class="modal_2" >
-                          <div class="modal-content">
-                              <span class="close" style="text-align:right;">&times;</span>
-                              <div class="modd">
-                                  <h4>Don't have a prescription?</h4>
-                                  <h5 style="font-style: italic; ">Add prescription</h5>
-                              </div>
-                              <button type="button" class="modd2 btn btn-success" >Upload </button>
+ 
+  <div class="container" style=" margin-right: 0; margin-left: 0;background: #f4813f;min-width: 100%;min-height: 17vh;">
+    <div class="row">
+      <div class="col-1">
+        <img src="assets/images/logo2.jpeg" style="height:100px; width:50px;margin-left: 15%;margin-top: 2%;">
+        </div>
+      <div class="col-7">
+        <input type="text" class="form-a" aria-label="Text input with dropdown button"
+         placeholder=" Search for Medicines/ Healthcare Products">
+      </div>
+      <div class="col-4" style="padding: 20px;">
+                        <div class="_3SnXL" id="_123v">
+                          <div tabindex="0" role="button" class="_2tdEn _1pXi6 _1D8Iz">
+                              <div class="_35UmJ"><button id="myBtn" class="btn btn-primary btn-sm" style="background: #f4813f;border: none;">Add Prescription</button>                                <!-- <svg width="15" height="15" viewBox="0 2 20 20">
+                                      <path fill="currentColor" fill-rule="evenodd"
+                                          d="M16.6 8.6L12 13.2 7.4 8.6 6 10l6 6 6-6z"></path>
+                                  </svg>-->
+                                  </div>
                           </div>
-  
                       </div>
-                        </div>       
-              <div class="abc3 col-12 col-sm-12 collapse navbar-collapse" id="Navbar">
-                  <ul class="navbar-nav ml-auto mr-auto">
-                      <li class="nav-item" style="padding:5px; padding-top: 0px;"><a class="nav-link" href="./index.html">Instruments</a></li>
-                      <li class="nav-item" style="padding:5px; padding-top: 0px;"><a class="nav-link" href="#"> Health & Fitness</a></li>
-                      <li class="nav-item" style="padding:5px; padding-top: 0px;"><a class="nav-link" href="#">Consult a Doctor</a></li>
-                      <li class="nav-item" style="padding:5px; padding-top: 0px;"><a class="nav-link" href="#">Diagnostic Test</a></li>
-                      <li class="nav-item" style="padding:5px; padding-top: 0px;"><a class="nav-link" href="./quickorder.html">Quick Order</a></li>
-                      <li class="nav-item" style="padding:5px; padding-top: 0px;"><a class="nav-link" href="#"><span class="fa fa-percent"></span>  Discounts</a></li>
-                      <li class="nav-item" style="padding:5px; padding-top: 0px;"><a class="nav-link" href="./login.html"><span class="fa fa-smile-beam"></span>  Login/Signup</a></li>
-                      <li class="nav-item" style="padding:5px; padding-top: 0px;"><a class="nav-link" href="./cart.html"><span class="fa fa-cart-plus"></span> Cart</a></li>
-  
-                  </ul>
-                  </div>
-              </div>
-            
-              
-          </div>
-        </nav>
-          
-    </header>
+                      <div id="myModal" class="modal_2" >
+                        <div class="modal-content">
+                            <span class="close" style="text-align:right;">&times;</span>
+                            <div class="modd">
+                                <h4>Don't have a prescription?</h4>
+                                <h5 style="font-style: italic; ">Add prescription</h5>
+                            </div>
+                            <button type="button" class="modd2 btn btn-success" >Upload </button>
+                        </div>
+
+                    </div>
+                      </div> 
+    </div>
+    <div class="row">
+      <div class="col"style="
+      margin-left: 7%;margin-bottom: 1%;
+  ">
+  <button type="button" class="btn btn-primary" style="
+  background-color: transparent;
+  border-color: transparent;
+">
+   <svg xmlns="http://www.w3.org/2000/svg"  fill="white" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" style="
+   height: 3vh;
+">
+    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+  </svg> Select location
+</button>
+<button type="button" class="btn btn-primary"style="
+  background-color: transparent;
+  border-color: transparent;
+">Instruments</button>
+    <button type="button" class="btn btn-primary"style="
+    background-color: transparent;
+    border-color: transparent;
+">Health & Fitness</button>
+    <button type="button" class="btn btn-primary"style="
+    background-color: transparent;
+    border-color: transparent;
+">Consult a Doctor</button>
+    <button type="button" class="btn btn-primary"style="
+    background-color: transparent;
+    border-color: transparent;
+">Diagnostic Test</button>
+    <button type="button" class="btn btn-primary"style="
+    background-color: transparent;
+    border-color: transparent;
+">Quick Order</button>
+    <button type="button" class="btn btn-primary"style="
+    background-color: transparent;
+    border-color: transparent;
+">Discounts</button>
+    <button type="button" class="btn btn-primary"style="
+    background-color: transparent;
+    border-color: transparent;
+">Login/Signup</button>   
+    <button type="button" class="btn btn-primary"style="
+    background-color: transparent;
+    border-color: transparent;
+">Cart</button>     
+        
+        
+        
+        
+        
+        
+       
+      </div>
+    </div>
+  </div>
   
 				<div class="col">
 				  <div class="card">
